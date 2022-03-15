@@ -1,0 +1,21 @@
+<%- include('../partials/header.ejs')%>
+<%- include('../partials/nav.ejs') %>
+<main>
+    <section id="new_connection_body_section">
+        <br><br>
+        <div class = "center_div_1">
+            <form id = "new_connection_form action" action= '/users' method = 'POST'>
+                <label for="firstName">First Name:</label>
+                <input type="text" id="firstName" name="firstName" required><br><br><br>
+                <label for="lastName">Last Name:</label>
+                <input type="text" id="lastName" name="lastName" required><br><br><br>
+                <label for="email">Email Address:</label>
+                <input type="text" id="email" name="email" required><br><br><br>
+                <label for="password">Password:</label>
+                <input type="text" id="password" name="password" required><br><br><br>
+                <input type="submit" value="Sign Up" id="create_connection_button"><br><br><br>
+            </form>
+        </div>
+    </section>
+</main>
+<%- include('../partials/footer.ejs')%>

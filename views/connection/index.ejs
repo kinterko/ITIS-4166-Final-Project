@@ -1,0 +1,37 @@
+<%- include('../partials/header.ejs') %>
+<%- include('../partials/nav.ejs') %>
+<main class="w3-container w3-deep-purple">
+    <h2 class="w3-bar">Connections</h2>
+    <% if (connections.length) { %>
+        <% topics = [];%>
+        <% connections.forEach(connection => {%>
+            <% if(!topics.includes(connection.topic)) { %>
+                <% topics.push(connection.topic); %>
+            <% } %>
+        <% }); %> 
+        <% topics.forEach(topic => { %>
+        <div class="w3-container">
+            <h3 class="w3-container w3-purple w3-padding w3-round-large"><img src="/images/UH.png" class="logo" alt="Unlikely Heroes Logo"><%= topic %></h3>
+            <% connections.forEach(connection => { 
+                if (connection.topic === topic) { %>
+                <section class="w3-card w3-third card-margin w3-purple w3-mobile">
+                    <a href="/connections/<%= connection.id%>" class="no-decoration">
+                        <header class="w3-container w3-white">
+                            <h3 class="event-description"><%= connection.title %></h3>
+                        </header>
+                        <p class="event-description w3-padding"><img src="<%= connection.imgUrl %>" alt="<%= connection.imgUrl %>" class="card-image"></p>
+                        <footer class="w3-container w3-white">
+                            <p class="event-date">Event Date: <%= connection.when %></p>
+                        </footer>
+                    </a>
+                </section>
+                <% }
+            }); %>
+        </div>
+        <% }); %>
+   <% } else { %>
+        <p>There are no connections to display.</p>
+    <% } %>
+            
+</main>
+<%- include('../partials/footer.ejs') %>

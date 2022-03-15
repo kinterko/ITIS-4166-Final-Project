@@ -1,0 +1,47 @@
+<%- include('../partials/header.ejs') %>
+<%- include('../partials/nav.ejs') %>
+<main class="w3-container w3-white">
+    <h1><%= connection.title %></h1>  
+    <div class="w3-panel">
+    <% if (user == connection.host._id){ %>
+        <form action="connections.html">
+            <button type="submit" formmethod = "GET" formaction = "/connections/<%= connection.id %>/edit" class="w3-btn w3-round w3-right" id="editButton">Edit</button>
+            <button type="submit" formmethod = "POST" formaction = "/connections/<%= connection.id %>?_method=DELETE" class="w3-btn w3-round w3-right" id="deleteButton">Delete</button>
+        </form>
+    <% } else if (user && user != connection.host._id) { %>
+        <form action="connections.html">
+            <h3>Will you be attending this event?</h3>
+            <% if (rsvps) { %>
+                <h4>Signed Up so far: <%= rsvps %></h4>
+            <% } else { %>
+                <h4>Signed Up so far: 0</h4>
+            <% } %>
+            <br>
+            <button type="submit" formmethod="POST" formaction="/connections/<%= connection.id %>/rsvp" class="connection_change_button" value = 'YES' name = 'rsvp' id="connection_yes_button">Yes</button>
+            <button type="submit" formmethod="POST" formaction="/connections/<%= connection.id %>/rsvp" class="connection_change_button" value = 'MAYBE' name = 'rsvp' id="connection_maybe_button">Maybe</button>
+            <button type="submit" formmethod="POST" formaction="/connections/<%= connection.id %>/rsvp" class="connection_change_button" value = 'NO' name = 'rsvp' id="connection_no_button">No</button>
+        </form>
+    <% } %>
+    </div>
+    <div class="w3-cell-row">
+        <div class="w3-container w3-cell w3-half">
+            <section class="w3-card card-margin w3-deep-purple">
+                <h4 class="event-description w3-padding"><br><img src="<%= connection.imgUrl %>" alt="<%= connection.imgUrl %>" class="card-image"><br><br></h4>
+            </section>
+        </div>
+        <div class="w3-container w3-cell w3-half">
+            <h3>Hosted by <%= connection.host.firstName + ' ' + connection.host.lastName %></h3>
+            <p><b>Start Date: </b><%= connection.when %></p>
+            <p><b>Event Time: </b><%= connection.startTime %> - <%= connection.endTime %></p>
+            <p><b>Days to Meet: </b><%= connection.meetingDays %></p>
+            <p><b>Location: </b><%= connection.where %></p>
+        </div>
+    </div>
+    <div class="w3-container">
+        <h3 class="w3-bar">Event Description</h3>
+        <p><%= connection.details %></p>
+        <hr>
+        <p><small>last edited: <%= connection.createdAt %></small></p>
+    </div>
+</main>
+<%- include('../partials/footer.ejs') %>

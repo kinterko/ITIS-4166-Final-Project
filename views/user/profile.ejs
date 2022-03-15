@@ -1,0 +1,53 @@
+<%- include('../partials/header.ejs') %>
+<%- include('../partials/nav.ejs') %>
+<main>
+    <section>
+        <div class="w3-container">
+            <br><br>
+            <h3> Welcome, <%=user.firstName%> </h3>
+            <div class="w3-container">
+                <% if(connections.length){ %>
+                    <p>You have created the following connections:</p>
+                    <div class="sports">
+                        <ul>
+                        <% connections.forEach(connection=>{ %>
+                            <li><a href='/connections/<%=connection.id %>' ><%= connection.title %></a></li>
+                        <%}); %>
+                        </ul>
+                    </div>
+                <% } else { %>
+                    <p>You have not created any connections</p>
+                <%} %>
+            </div>
+            <br>
+            <div id="line_under_header1"></div>
+            <br>
+            <div class="w3-container">
+            <% if(rsvps.length) { %>
+                <h3>You have RSVPed to the following Connections:</h3>
+                <table>
+                    <tr>
+                        <th>Connection Title</th>
+                        <th>Status</th>
+                        <th>Update</th>
+                        <th>Delete</th>
+                    </tr>
+                    <%rsvps.forEach(rsvp => { %>
+                        <tr>
+                            <td><a href = '/connections/<%= rsvp.connection.id %>'><%= rsvp.connection.title %></a></td>
+                            <td><%= rsvp.rsvp %></td>
+                            <form>
+                                <td><button type="submit" formmethod="GET" formaction="/connections/<%= rsvp.connection._id %>" class="connection_change_button" id="rsvp_edit_button">Edit</button></td>
+                                <td><button type="submit" formmethod="POST" formaction="/connections/<%= rsvp.connection._id %>/rsvp?_method=DELETE" class="connection_change_button" id="rsvp_delete_button">Delete</button></td>
+                            </form>
+                        </tr>
+                    <% }); %>
+                </table>
+            <% } else { %>
+                <p>You have not RSVPed to any Connections</p>
+            <% } %>
+        </div>
+        </div>
+    </section>
+</main>
+    <%- include('../partials/footer.ejs') %>

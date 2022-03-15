@@ -1,0 +1,139 @@
+[{
+  "_id": {
+    "$oid": "6196b5fdec1da5ada74862c3"
+  },
+  "title": "Test 1",
+  "topic": "TTRPGs",
+  "details": "SADFSADFSADFF",
+  "meetingDays": "Monday",
+  "when": "2021-12-07",
+  "startTime": "16:30",
+  "endTime": "18:30",
+  "where": "Here",
+  "imgUrl": "https://image.shutterstock.com/z/stock-photo-dnd-dice-game-1158851824.jpg",
+  "host": {
+    "$oid": "6196b56aec1da5ada74862b9"
+  },
+  "createdAt": {
+    "$date": "2021-11-18T20:22:21.233Z"
+  },
+  "updatedAt": {
+    "$date": "2021-11-18T20:22:21.233Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6196b620ec1da5ada74862c5"
+  },
+  "title": "Test 2",
+  "topic": "Large Events",
+  "details": "asdfasdfdasfsadfasdf",
+  "meetingDays": "Tuesday",
+  "when": "2022-01-19",
+  "startTime": "12:30",
+  "endTime": "16:30",
+  "where": "My House",
+  "imgUrl": "https://image.shutterstock.com/z/stock-photo-barcelona-spain-december-playing-dungeons-and-dragons-role-play-board-game-dices-and-1601426806.jpg",
+  "host": {
+    "$oid": "6196b56aec1da5ada74862b9"
+  },
+  "createdAt": {
+    "$date": "2021-11-18T20:22:56.714Z"
+  },
+  "updatedAt": {
+    "$date": "2021-11-18T20:22:56.714Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6196b63aec1da5ada74862c7"
+  },
+  "title": "Test 3",
+  "topic": "Board Game Socials",
+  "details": "asdfasdfasdfasdf",
+  "meetingDays": "Wednesday",
+  "when": "2022-01-28",
+  "startTime": "17:30",
+  "endTime": "21:30",
+  "where": "Here1",
+  "imgUrl": "https://image.shutterstock.com/z/stock-photo-dnd-dice-game-1158851824.jpg",
+  "host": {
+    "$oid": "6196b56aec1da5ada74862b9"
+  },
+  "createdAt": {
+    "$date": "2021-11-18T20:23:22.990Z"
+  },
+  "updatedAt": {
+    "$date": "2021-11-18T20:24:21.106Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6196b6b3ec1da5ada74862e7"
+  },
+  "title": "Test 4",
+  "topic": "TTRPGs",
+  "details": "dfsgsdfgsdfgsdfg",
+  "meetingDays": "Friday",
+  "when": "2021-10-28",
+  "startTime": "12:30",
+  "endTime": "15:30",
+  "where": "Game Shop",
+  "imgUrl": "https://image.shutterstock.com/z/stock-photo-barcelona-spain-december-playing-dungeons-and-dragons-role-play-board-game-dices-and-1601426806.jpg",
+  "host": {
+    "$oid": "6196b583ec1da5ada74862bb"
+  },
+  "createdAt": {
+    "$date": "2021-11-18T20:25:23.711Z"
+  },
+  "updatedAt": {
+    "$date": "2021-11-18T20:25:23.711Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6196b6d6ec1da5ada74862ea"
+  },
+  "title": "Test 5",
+  "topic": "Large Events",
+  "details": "dsfgdsfgsdfgdsfgsdfgdsfg",
+  "meetingDays": "Thursday",
+  "when": "2021-11-18",
+  "startTime": "13:30",
+  "endTime": "18:34",
+  "where": "House",
+  "imgUrl": "https://image.shutterstock.com/z/stock-photo-dnd-dice-game-1158851824.jpg",
+  "host": {
+    "$oid": "6196b583ec1da5ada74862bb"
+  },
+  "createdAt": {
+    "$date": "2021-11-18T20:25:58.490Z"
+  },
+  "updatedAt": {
+    "$date": "2021-11-18T20:25:58.490Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6196b6f5ec1da5ada74862ec"
+  },
+  "title": "Test 6",
+  "topic": "Board Game Socials",
+  "details": "jtydjfsghftgujyrtdfjhugf",
+  "meetingDays": "Saturday",
+  "when": "2022-01-22",
+  "startTime": "17:30",
+  "endTime": "18:30",
+  "where": "Test",
+  "imgUrl": "https://image.shutterstock.com/z/stock-photo-barcelona-spain-december-playing-dungeons-and-dragons-role-play-board-game-dices-and-1601426806.jpg",
+  "host": {
+    "$oid": "6196b583ec1da5ada74862bb"
+  },
+  "createdAt": {
+    "$date": "2021-11-18T20:26:29.147Z"
+  },
+  "updatedAt": {
+    "$date": "2021-11-18T20:26:29.147Z"
+  },
+  "__v": 0
+}]

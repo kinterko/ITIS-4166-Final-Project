@@ -1,0 +1,65 @@
+<%- include('../partials/header.ejs')%>
+<%- include('../partials/nav.ejs') %>
+<main class="w3-container w3-white">
+    <form action="/connections" method="POST" class="halfwidth opacity-but-not-children w3-margin w3-padding w3-round">
+        <h2>Create a Connection</h2>
+
+                    <select class="w3-input w3-border w3-round-large" name="topic" id="topic" required>
+                    <option value = "TTRPGs">TTRPGs</option>
+                    <option value = "Large Events">Large Events</option>
+                    <option value = "Board Game Socials">Board Game Socials</option>
+                </select>
+
+        <br>
+
+        <label for="newTopic"><br></label>
+        <input class="w3-input w3-border w3-round-large" type="text" id="newTopic" name="newTopic" placeholder="Enter a new topic">
+        
+        <br>
+
+        <label for="title">Event Title</label>
+        <input class="w3-input w3-border w3-round-large" type="text" id="title" name="title" placeholder="" required>
+
+        <br>
+
+        <label for="details">Event Details</label>
+        <textarea class="w3-input w3-border w3-round-large" id="details" name="details" rows="5" required minlength="10"></textarea>
+
+        <br>
+
+        <label for="meetingDays">Meeting Days</label>
+        <textarea class="w3-input w3-border w3-round-large" id="meetingDays" name="meetingDays" rows="5" required></textarea>
+
+        <br>
+
+        <label for="when">Event Date</label>
+        <input class="w3-input w3-border w3-round-large" type="date" id="when" name="when" value="2021-10-12" required>
+
+        <br>
+
+        <label for="startTime">Start Time</label>
+        <input class="w3-input w3-border w3-round-large" type="time" id="startTime" name="startTime" value="12:30" required>
+
+        <br>
+
+        <label for="endTime">End Time</label>
+        <input class="w3-input w3-border w3-round-large" type="time" id="endTime" name="endTime" value="12:30" required>
+
+
+        <label for="where">Where will we meet?</label>
+        <input class="w3-input w3-border w3-round-large" type="text" id="where" name="where" required>
+
+        <br>
+
+        <label for="imgUrl">Image Url</label>
+        <input class="w3-input w3-border w3-round-large" type="text" id="imgUrl" name="imgUrl" required>
+
+        <br>
+
+        <div class="w3-padding-16">
+            <button type="submit" class="w3-btn w3-round-large w3-purple w3-hover-deep-purple w3-mobile">Create Connection</button>
+        </div>
+    </form>
+</main>
+<script src="/js/new.js"></script>
+<%- include('../partials/footer.ejs')%>

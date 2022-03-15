@@ -1,0 +1,66 @@
+<%- include('../partials/header.ejs')%>
+<%- include('../partials/nav.ejs') %>
+<main class="w3-container w3-white">
+    <form action="/connections/<%= connection.id %>?_method=PUT" method="POST" class="halfwidth opacity-but-not-children w3-margin w3-padding w3-round">
+        <h1>Edit a Connection</h1>
+
+
+        <br>
+
+        <label for="newTopic"><br></label>
+        <input class="w3-input w3-border w3-round-large" type="text" id="newTopic" name="newTopic" placeholder="Enter a new topic">
+        
+        <br>
+
+        <label for="title">Title</label>
+        <input class="w3-input w3-border w3-round-large" type="text" id="title" name="title" value="<%= connection.title %>" required>
+        
+        <br>
+
+        <label for="details">Details</label>
+        <textarea class="w3-input w3-border w3-round-large" id="details" name="details" rows="5" required minlength="10"><%= connection.details %></textarea>
+
+        <br>
+
+        <label for="meetingDays">Meeting Days</label>
+        <input class="w3-input w3-border w3-round-large" type="text" id="meetingDays" name="meetingDays" value="<%= connection.meetingDays %>" required>
+
+        <br>
+
+        <label for="when">When</label>
+        <input class="w3-input w3-border w3-round-large" type="date" id="when" name="when" value="<%= connection.when %>" required>
+
+        <br>
+
+        <label for="startTime">Start</label>
+        <input class="w3-input w3-border w3-round-large" type="time" id="startTime" name="startTime" value="<%= connection.startTime %>" required>
+
+        <br>
+
+        <label for="endTime">End</label>
+        <input class="w3-input w3-border w3-round-large" type="time" id="endTime" name="endTime" value="<%= connection.endTime %>" required>
+
+        <br>
+
+        <label for="host">Host</label>
+        <input class="w3-input w3-border w3-round-large" type="text" id="host" name="host" value="<%= connection.host %>" required>
+
+        <br>
+
+        <label for="where">Where</label>
+        <input class="w3-input w3-border w3-round-large" type="text" id="where" name="where" value="<%= connection.where %>" required>
+
+        <br>
+
+        <label for="imgUrl">Image Url</label>
+        <input class="w3-input w3-border w3-round-large" type="text" id="imgUrl" name="imgUrl" value="<%= connection.imgUrl %>" required>
+
+        <br>
+
+        <div class="w3-padding-16">
+            <button type="submit" class="w3-btn w3-round-large w3-purple w3-hover-deep-purple w3-mobile">Save Changes</button>
+        </div>
+    </form>
+</main>
+<script src="/js/new.js"></script>
+<%- include('../partials/footer.ejs')%>

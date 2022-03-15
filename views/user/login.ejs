@@ -1,0 +1,18 @@
+<%- include('../partials/header.ejs')%>
+<%- include('../partials/nav.ejs') %>
+<main>
+    <section>
+        <br><br>
+        <div class = "w3-container">
+            <form id = "new_connection_form" action = '/users/login' method = 'POST' class = >
+                <label for="email">Email:</label>
+                <input type="text" id="email" name="email" required><br><br><br>
+                <label for="password">Password:</label>
+                <input type="text" id="password" name="password" required><br><br><br>
+                <input type="submit" value="Log in" id="create_connection_button"><br><br><br>
+            </form>
+        </div>
+    </section>
+
+</main>
+<%- include('../partials/footer.ejs')%>

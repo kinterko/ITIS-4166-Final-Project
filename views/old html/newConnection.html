@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>New Connection</title>
+</head>
+
+<body>
+    <!--Header section of site-->
+    <header>
+        <section id="header">
+            <div class="h_div">
+                <div class="header_element">
+                    <a href="index.html"><img src="UH.png" alt="brand img" id="brandImg"></a>
+                </div>
+                <div class="header_element" id="h_text_div">
+                    <h1 id="header_text">The Unlikely Heroes: TTRPG Club</h1>
+                </div>
+                <div class="header_element" id="login_sign_up_links">
+                    <a href=newConnection.html class="user_link" id="start_a_new_connection_link">Start a new connection          |          </a>
+                    <a href="index.html" class="user_link" id="sign_up_link">Sign-up         |          </a>
+                    <a href="index.html" class="user_link" id="login_link">Login</a>
+                </div>
+            </div>
+            <br>
+            <!--line under header-->
+            <div id="header_line1"></div>
+            <br>
+        </section>
+        <!--navigation bar-->
+        <section id="site_nav_bar_section">
+            <div id="nav_d">
+                <nav id="nav_bar">
+                    <div class="c_div">
+                        <a id="connections_nav_link" href="connections.html">Connections</a>
+                    </div>
+                </nav>
+            </div>
+        </section>
+    </header>
+    <main>
+        <section id="new_connection_b_s">
+            <br><br>
+            <div class="c_div">
+                <!--Create new connection form-->
+                <form id="new_connection_f" action="connections.html">
+				    <label for="connection_catagory">Catagory:</label>
+                    <select id="connection_catagory" name="connection_catagory">
+                        <option value = "TTRPGs">TTRPGs</option>
+                        <option value = "Large Events">Large Events</option>
+                        <option value = "Board Game Socials">Board Game Socials</option>
+                    </select><br><br><br>
+                    <label for="connection_title">Title:</label>
+                    <input type="text" id="connection_title" name="connection_title"><br><br><br>
+					<label for="connection_host">Host:</label>
+                    <input type="text" id="connection_host" name="connection_host"><br><br><br>
+                    <label for="connection_date">Date:</label>
+                    <input type="date" id="connection_date" name="connection_date"><br><br><br>
+                    <label for="connection_start_time">Start Time:</label>
+                    <input type="time" id="connection_start_time" name="connection_start_time"><br><br><br>
+                    <label for="connection_end_time">End Time:</label>
+                    <input type="time" id="connection_end_time" name="connection_end_time"><br><br><br>
+                    <label for="connection_location">Location:</label>
+                    <input type="text" id="connection_location" name="connection_location"><br><br><br>
+                    <label for="connection_description">Description:</label>
+                    <input type="text" id="connection_description" name="connection_description"><br><br><br><br>
+					<label for="connection_img_url">Image URL:</label>
+                    <input type="text" id="connection_img_url" name="connection_img_url"><br><br><br><br>
+                    <input type="submit" value="Create Connection" id="create_connection_b">
+                    <br><br><br>
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <!--site footer, same site wide-->
+        <section id="footer_section">
+            <div id="footer_d">
+                <div class="footer_element" id="cr_footer">
+                    <h3>&copy; The Unlikely Heroes: TTRPG Club</h3>
+                </div>
+                <div class="footer_element" id="contact_us_link">
+                    <a href="index.html">
+                        <h3>CONTACT US</h3>
+                    </a>
+                </div>
+                <div class="footer_element" id="D&D_shop_link">
+                    <a href="index.html">
+                        <h3>Buy D&D Merch</h3>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </footer>
+</body>
+
+
+</html>
